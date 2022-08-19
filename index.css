@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+nav {
+  height: 60vh;
+  width: 5vw;
+}
+.hero {
+  width: 80vw;
+  height: 100vh;
+}
+.active {
+  @apply rounded-full bg-sky-600 h-9 w-9 flex justify-center items-center;
+}
+.nav-btn {
+  @apply border-none bg-transparent cursor-pointer text-lg;
+}
+.open-btn {
+  @apply fixed top-4 right-4;
+}
+.close-btn {
+  @apply border-none bg-transparent cursor-pointer text-lg;
+}
+.nav-bg {
+  @apply fixed top-0 right-0 h-screen translate-x-full ease-in-out duration-300 z-20;
+}
+.nav-bg.visible {
+  @apply translate-x-0;
+}
+.nav-sky-400 {
+  @apply bg-sky-400 w-3/5 max-w-2xl;
+  min-width: 320px;
+}
+
+.nav-sky-700 {
+  @apply bg-sky-700;
+  width: 95%;
+}
+.nav-white {
+  @apply bg-white p-16 text-black;
+  width: 95%;
+}
+.close-btn {
+  @apply absolute top-12 left-12;
+}
+.list {
+  @apply list-none p-0;
+}
+.list li {
+  @apply my-8;
+}
+
+.nav-link {
+  @apply ease-in-out duration-300;
+}
+button:focus {
+  outline: none;
+}
+button {
+  @apply relative overflow-hidden;
+}
+button .circle {
+  @apply absolute w-24 h-24 -translate-y-1/2 -translate-x-1/2  bg-white rounded-full scale-0;
+  animation: scale 0.8s ease-out;
+}
+@keyframes scale {
+  to {
+    transform: scale(2) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+.redirect {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  flex-direction: column;
+  opacity: 0;
+  display: none;
+  transition: all 1s ease-in;
+}
+
+.project img:hover {
+  transform: scale(1);
+  filter: blur(2px) brightness(80%);
+}
+
+.redirect.moveup {
+  display: flex;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.project {
+  position: relative;
+}
+
+.redirect-btn {
+  @apply px-6 py-2 my-1.5 bg-sky-600 font-bold;
+}
