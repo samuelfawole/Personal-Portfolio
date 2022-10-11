@@ -5,10 +5,12 @@
 html,
 body {
   scroll-behavior: smooth;
+  margin: 0;
+  overflow-x: hidden;
 }
 nav {
   height: 60vh;
-  width: 5vw;
+  width: 80px;
 }
 .hero {
   width: 80vw;
@@ -27,7 +29,7 @@ nav {
   @apply border-none bg-transparent cursor-pointer text-lg;
 }
 .nav-bg {
-  @apply fixed top-0 right-0 h-screen translate-x-full ease-in-out duration-300 z-20;
+  @apply fixed top-0 bottom-0 right-0 h-screen translate-x-full ease-in-out duration-300 z-20;
 }
 .nav-bg.visible {
   @apply translate-x-0;
@@ -104,4 +106,18 @@ button .circle {
 
 .redirect-btn {
   @apply px-6 py-2 my-1.5 bg-sky-600 font-bold;
+}
+
+@keyframes wave {
+  0%,
+  50%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(2rem);
+  }
+  75% {
+    transform: translateX(-2rem);
+  }
 }

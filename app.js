@@ -9,26 +9,6 @@ const contact = document.querySelector('.contact')
 const about = document.querySelector('.about')
 const links = document.querySelectorAll('.nav-link')
 
-// Setup isScrolling variable
-var isScrolling
-
-// Listen for scroll events
-// window.addEventListener(
-//   'scroll',
-//   function (event) {
-//     const position = scrollY
-//     ball.style.top = `${this.scrollY}rem`
-//     window.clearTimeout(isScrolling)
-
-//     // Set a timeout to run after scrolling ends
-//     isScrolling = setTimeout(function () {
-//       // Run the callback
-//       console.log(ball)
-//     }, 500)
-//   },
-//   false
-// )
-
 openBtn.addEventListener('click', () => {
   nav.forEach((navBg) => navBg.classList.add('visible'))
 })
@@ -46,7 +26,6 @@ function updateList() {
       Math.abs(b.getBoundingClientRect().top)
     )
   })
-  console.log([...document.querySelectorAll('h1, h2')].indexOf(titles[0]))
   document
     .querySelectorAll('.active')
     .forEach((c) => c.classList.remove('active'))
