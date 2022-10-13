@@ -12,6 +12,7 @@ module.exports = {
         },
         badge: '#9333ea',
         input: '#8492a6',
+        card: '#292c30',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
